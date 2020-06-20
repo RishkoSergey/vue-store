@@ -6,16 +6,24 @@
       <img src="../assets/favorites.png" class="header__favorites__icon" />
       <p>Избранное</p>
     </div>
-    <div class="header__cart">
+    <button class="header__cart">
+      <div v-if="getCart.length" class="header__cart__label">
+        {{ getCart.length }}
+      </div>
       <img src="../assets/cart.png" class="header__cart__icon" />
       <p>Корзина</p>
-    </div>
+    </button>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  name: "Header"
+  name: "Header",
+  computed: {
+    ...mapGetters(["getCart"])
+  }
 };
 </script>
 
@@ -57,6 +65,24 @@ export default {
     &__icon {
       height: 70%;
       margin-right: 5px;
+    }
+  }
+  &__cart {
+    position: relative;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &__label {
+      position: absolute;
+      top: 16%;
+      left: 30%;
+      background-color: orange;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      font-size: 14px;
+      text-align: center;
     }
   }
 }

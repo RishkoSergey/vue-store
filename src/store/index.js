@@ -10,11 +10,18 @@ export default new Vuex.Store({
       await axios.get("/products.json").then(res => {
         ctx.commit("fetchProducts", res.data);
       });
+    },
+    addToCart(ctx, product) {
+      console.log(product);
+      ctx.commit("addToCart", product);
     }
   },
   mutations: {
     fetchProducts(state, data) {
       state.products = data;
+    },
+    addToCart(state, data) {
+      state.cart.push(data);
     }
   },
   state: {
@@ -27,6 +34,9 @@ export default new Vuex.Store({
   getters: {
     getProducts(state) {
       return state.products;
+    },
+    getCart(state) {
+      return state.cart;
     }
   }
 });
