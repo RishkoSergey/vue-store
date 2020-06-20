@@ -26,6 +26,7 @@ export default {
 <style lang="scss">
 #app {
   background-color: #ededed;
+  min-height: 100vh;
 }
 .main {
   margin-top: 60px;

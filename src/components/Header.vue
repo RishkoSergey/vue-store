@@ -6,13 +6,13 @@
       <img src="../assets/favorites.png" class="header__favorites__icon" />
       <p>Избранное</p>
     </div>
-    <button class="header__cart">
+    <div class="header__cart">
       <div v-if="getCart.length" class="header__cart__label">
         {{ getCart.length }}
       </div>
       <img src="../assets/cart.png" class="header__cart__icon" />
       <p>Корзина</p>
-    </button>
+    </div>
   </div>
 </template>
 
@@ -69,9 +69,6 @@ export default {
   }
   &__cart {
     position: relative;
-    background-color: #fff;
-    outline: none;
-    border: none;
     cursor: pointer;
     &__label {
       position: absolute;

@@ -12,11 +12,11 @@
     <div class="product__price">{{ product.price }} ₽</div>
     <div class="product__cart">
       <div class="product__cart__changeCount">
-        <button @click="decCount">-</button>
+        <div @click="decCount">-</div>
         {{ count }}
-        <button @click="incCount">+</button>
+        <div @click="incCount">+</div>
       </div>
-      <button @click="addProduct">Добавить в корзину</button>
+      <div @click="addProduct">Добавить в корзину</div>
     </div>
   </div>
 </template>
@@ -71,6 +71,11 @@ export default {
   &__cart {
     padding: 0 10px;
     width: calc(100% - 20px);
+  }
+  &__cart {
+    &__changeCount {
+      display: flex;
+    }
   }
 }
 </style>
