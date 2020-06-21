@@ -15,6 +15,11 @@
       {{ count }}
       <div @click="incCount">+</div>
     </div>
+    <img
+      class="product__remove"
+      src="../assets/delete.png"
+      @click="removeFromCart(product.id)"
+    />
   </div>
 </template>
 
@@ -29,17 +34,22 @@ export default {
   }),
   mounted() {
     this.count = this.product.count;
-    console.log(this.count);
   },
   methods: {
     ...mapActions(["editCart", "removeFromCart"]),
     decCount() {
-      if (this.count > 0) this.count--;
-      this.editCart(this.product.id, this.count);
+      if (this.count > 1) {
+        this.count--;
+        this.product.count = this.count;
+        this.editCart(this.product);
+      }
     },
     incCount() {
-      if (this.count < 10) this.count++;
-      this.editCart(this.product.id, this.count);
+      if (this.count < 10) {
+        this.count++;
+        this.product.count = this.count;
+        this.editCart(this.product);
+      }
     },
     addProduct() {
       if (this.count) {
@@ -56,6 +66,7 @@ export default {
 .product {
   width: 100%;
   height: 30vh;
+  position: relative;
   &__image {
     height: 50%;
     display: flex;
@@ -75,6 +86,13 @@ export default {
   }
   &__changeCount {
     display: flex;
+  }
+  &__remove {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    width: 50px;
+    height: 50px;
   }
 }
 </style>

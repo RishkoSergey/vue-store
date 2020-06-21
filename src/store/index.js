@@ -23,8 +23,8 @@ export default new Vuex.Store({
     setMaxPrice(ctx, maxPrice) {
       ctx.commit("setMaxPrice", maxPrice);
     },
-    editCart(ctx, id, count) {
-      ctx.commit("editCart", id, count);
+    editCart(ctx, product) {
+      ctx.commit("editCart", product);
     },
     removeFromCart(ctx, id) {
       ctx.commit("removeFromCart", id);
@@ -48,9 +48,8 @@ export default new Vuex.Store({
     setMaxPrice(state, maxPrice) {
       state.maxPrice = maxPrice;
     },
-    editCart(state, id, count) {
-      state.cart.find(item => item.id == id).count = count;
-      console.log(count);
+    editCart(state, product) {
+      state.cart.find(item => item.id == product.id).count = product.count;
     },
     removeFromCart(state, id) {
       const cartId = state.cart.findIndex(item => item.id == id);
