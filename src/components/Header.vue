@@ -6,21 +6,29 @@
       <img src="../assets/favorites.png" class="header__favorites__icon" />
       <p>Избранное</p>
     </div>
-    <div class="header__cart">
+    <div class="header__cart" @click="showPopup = true">
       <div v-if="getCart.length" class="header__cart__label">
         {{ getCart.length }}
       </div>
       <img src="../assets/cart.png" class="header__cart__icon" />
       <p>Корзина</p>
     </div>
+    <Popup v-if="showPopup" @close="showPopup = false" />
   </div>
 </template>
 
 <script>
+import Popup from "./Popup";
 import { mapGetters } from "vuex";
 
 export default {
   name: "Header",
+  components: {
+    Popup
+  },
+  data: () => ({
+    showPopup: false
+  }),
   computed: {
     ...mapGetters(["getCart"])
   }

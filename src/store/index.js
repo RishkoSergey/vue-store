@@ -22,6 +22,12 @@ export default new Vuex.Store({
     },
     setMaxPrice(ctx, maxPrice) {
       ctx.commit("setMaxPrice", maxPrice);
+    },
+    editCart(ctx, id, count) {
+      ctx.commit("editCart", id, count);
+    },
+    removeFromCart(ctx, id) {
+      ctx.commit("removeFromCart", id);
     }
   },
   mutations: {
@@ -41,7 +47,14 @@ export default new Vuex.Store({
     },
     setMaxPrice(state, maxPrice) {
       state.maxPrice = maxPrice;
-      console.log(state.maxPrice);
+    },
+    editCart(state, id, count) {
+      state.cart.find(item => item.id == id).count = count;
+      console.log(count);
+    },
+    removeFromCart(state, id) {
+      const cartId = state.cart.findIndex(item => item.id == id);
+      state.cart.splice(cartId, 1);
     }
   },
   state: {
@@ -70,6 +83,9 @@ export default new Vuex.Store({
     },
     getCart(state) {
       return state.cart;
+    },
+    getSum(state) {
+      return state.cart.reduce((a, b) => a + b.price * b.count, 0);
     },
     getCategories(state) {
       const categories = ["Все товары"];

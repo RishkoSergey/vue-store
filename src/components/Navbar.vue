@@ -29,8 +29,8 @@ export default {
   data: () => ({
     currentCategory: "Все товары",
     showMenu: false,
-    minPrice: 0,
-    maxPrice: 1000000
+    minPrice: "",
+    maxPrice: ""
   }),
   computed: {
     ...mapGetters(["getCategories"])
