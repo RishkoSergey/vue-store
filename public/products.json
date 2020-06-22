@@ -5,7 +5,6 @@
     "category": "Смартфон",
     "price": 16990,
     "count": 20,
-    "description": "Диагональ (дюйм): 6.4; Разрешение (пикс): 2400x1080; Встроенная память (Гб): 64; Фотокамера (Мп): 48 + 8 + 5 + 5 (четыре основные камеры); Количество ядер: 8",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/678/sm_315_galaxya31_black_front_raw.jpg/resize/483x483/hq/"  
   },
   {
@@ -14,7 +13,6 @@
     "category": "Смартфон",
     "price": 103990,
     "count": 20,
-    "description": "Диагональ (дюйм): 5.8; Разрешение (пикс): 2436x1125; Встроенная память (Гб): 256; Фотокамера (Мп): 12 + 12 + 12 (тройная); Оптический зум: x2",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/754/iphone_11_pro_gold_2-up_vertical_us-en_screen.jpg/resize/483x483/hq/"  
   },
   {
@@ -23,7 +21,6 @@
     "category": "Смартфон",
     "price": 32990,
     "count": 20,
-    "description": "Диагональ (дюйм): 6.47; Разрешение (пикс): 2340x1080; Встроенная память (Гб): 128; Фотокамера (Мп): 64 + 8 + 5 + 2 (четыре основные камеры); Процессор: Qualcomm Snapdragon 730G",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/a60/16.jpg/resize/483x483/hq/"  
   },
   {
@@ -32,7 +29,6 @@
     "category": "Смартфон",
     "price": 34990,
     "count": 20,
-    "description": "Диагональ (дюйм): 6.53; Разрешение (пикс): 2400x1080; Встроенная память (Гб): 128; Фотокамера (Мп): 40 + 8 + 8 + 2 (четыре основные камеры); Оптический зум: x5",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/74f/14.jpg/resize/483x483/hq/"  
   },
   {
@@ -41,7 +37,6 @@
     "category": "Смартфон",
     "price": 39990,
     "count": 20,
-    "description": "Диагональ (дюйм): 6.1; Разрешение (пикс): 2340x1080; Встроенная память (Гб): 128; Фотокамера (Мп): 50 + 16 + 8 (тройная); Оптический зум: x3",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/760/13.jpg/resize/483x483/hq/"  
   },
   {
@@ -50,7 +45,6 @@
     "category": "Ноутбук",
     "price": 57490,
     "count": 20,
-    "description": "Диагональ дисплея (дюйм): 15.6; Процессор: AMD Ryzen 7 3700U; Оперативная память (Мб): 8192; Видеокарта: AMD Radeon Vega 10; Операционная система: Windows 10",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/60b/1345434_1.jpg/resize/483x483/hq/"  
   },
   {
@@ -59,7 +53,6 @@
     "category": "Ноутбук",
     "price": 27990,
     "count": 20,
-    "description": "Диагональ дисплея (дюйм): 15.6; Процессор: AMD A9 9425; Оперативная память (Мб): 4096; Видеокарта: AMD Radeon R5; Операционная система: Windows 10 Home",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/141/1172399_v01_b.jpg/resize/483x483/hq/"  
   },
   {
@@ -68,7 +61,6 @@
     "category": "Ноутбук",
     "price": 20820,
     "count": 20,
-    "description": "Диагональ дисплея (дюйм): 15.6; Процессор: Intel® Celeron® 5205U; Оперативная память (Мб): 4096; Емкость HDD (Гб): 500; Видеокарта: Intel® UHD Graphic",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/75a/1209207_v01_b.jpg/resize/483x483/hq/"  
   },
   {
@@ -77,7 +69,6 @@
     "category": "Ноутбук",
     "price": 53590,
     "count": 20,
-    "description": "Диагональ дисплея (дюйм): 14.0; Процессор: AMD Ryzen 5 3500U; Оперативная память (Мб): 8192; Видеокарта: AMD Radeon Vega 8; Операционная система: Windows 10 trial (для ознакомления) Home",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/631/1196607_v01_b.jpg/resize/483x483/hq/"  
   },
   {
@@ -86,7 +77,6 @@
     "category": "Ноутбук",
     "price": 66990,
     "count": 20,
-    "description": "Диагональ дисплея (дюйм): 13.3; Процессор: Intel® Core™ i5; Оперативная память (Мб): 8192; Видеокарта: Intel® HD Graphics 6000; Операционная система: macOS Sierra",
     "image": "https://cdn.svyaznoy.ru/upload/iblock/173/macbook_air_pure_front_silver_screen.jpg/resize/483x483/hq/"  
   }
 ]

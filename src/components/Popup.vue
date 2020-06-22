@@ -6,6 +6,7 @@
         <img src="../assets/close.png" />
       </div>
     </div>
+    <router-link class="popup__link" to="/checkout">Оформить заказ</router-link>
   </div>
 </template>
 
