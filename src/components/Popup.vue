@@ -5,8 +5,12 @@
       <div class="popup__close" @click="closePopup">
         <img src="../assets/close.png" />
       </div>
+      <button @click="closePopup">
+        <router-link class="popup__link" to="/checkout">
+          Оформить заказ
+        </router-link>
+      </button>
     </div>
-    <router-link class="popup__link" to="/checkout">Оформить заказ</router-link>
   </div>
 </template>
 

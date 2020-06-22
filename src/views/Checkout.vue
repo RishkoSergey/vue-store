@@ -1,8 +1,8 @@
 <template>
-  <div class="about">
+  <div class="checkout">
     <h1>This is an about page</h1>
-    <Form />
     <CartList />
+    <Form />
   </div>
 </template>
 
@@ -18,3 +18,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.checkout {
+  margin-top: 60px;
+  padding: 0 20px;
+}
+</style>
