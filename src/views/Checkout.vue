@@ -1,6 +1,5 @@
 <template>
   <div class="checkout">
-    <h1>This is an about page</h1>
     <CartList />
     <Form />
   </div>
@@ -21,7 +20,9 @@ export default {
 
 <style lang="scss" scoped>
 .checkout {
-  margin-top: 60px;
   padding: 0 20px;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
 }
 </style>

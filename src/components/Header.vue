@@ -1,17 +1,14 @@
 <template>
   <div class="header">
     <img src="../assets/logo.jpg" class="header__logo" />
-    <input class="header__input" placeholder="Поиск товаров..." />
-    <div class="header__favorites">
-      <img src="../assets/favorites.png" class="header__favorites__icon" />
-      <p>Избранное</p>
-    </div>
-    <div class="header__cart" @click="showPopup = true">
-      <div v-if="getCart.length" class="header__cart__label">
-        {{ getCart.length }}
+    <div class="header__buttons">
+      <div class="header__buttons__cart" @click="showPopup = true">
+        <div v-if="getCart.length" class="header__buttons__cart-label">
+          {{ getCart.length }}
+        </div>
+        <img src="../assets/cart.png" />
+        <p>Корзина</p>
       </div>
-      <img src="../assets/cart.png" class="header__cart__icon" />
-      <p>Корзина</p>
     </div>
     <Popup v-if="showPopup" @close="showPopup = false" />
   </div>
@@ -38,11 +35,10 @@ export default {
 <style lang="scss" scoped>
 .header {
   display: flex;
-  position: fixed;
   top: 0;
   background-color: #fff;
   align-items: center;
-  justify-content: stretch;
+  justify-content: space-between;
   height: 60px;
   padding-left: 20px;
   width: calc(100% - 20px);
@@ -50,44 +46,52 @@ export default {
     height: 70%;
     margin-right: 10px;
   }
-  &__input {
-    height: 30px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding-left: 5px;
-    margin-right: 10px;
-    width: 100%;
-    &:focus {
-      outline: none;
-    }
-  }
-  &__favorites,
-  &__cart {
-    display: flex;
-    align-items: center;
+  &__buttons {
     height: 100%;
-    padding: 0 5px;
-    &:hover {
-      background-color: #ededed;
+    display: flex;
+    &__favorites,
+    &__cart {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 5px;
+      &:hover {
+        background-color: #ededed;
+      }
+      img {
+        height: 70%;
+        margin-right: 5px;
+      }
     }
-    &__icon {
-      height: 70%;
-      margin-right: 5px;
+    &__cart {
+      position: relative;
+      cursor: pointer;
+      &-label {
+        position: absolute;
+        top: 16%;
+        left: 30%;
+        background-color: orange;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        font-size: 14px;
+        text-align: center;
+      }
     }
   }
-  &__cart {
-    position: relative;
-    cursor: pointer;
-    &__label {
-      position: absolute;
-      top: 16%;
-      left: 30%;
-      background-color: orange;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      font-size: 14px;
-      text-align: center;
+  @media (max-width: 767px) {
+    font-size: 13px;
+    height: 30px;
+    &__buttons {
+      &__cart {
+        &-label {
+          left: 20%;
+          font-size: 12px;
+          width: 14px;
+          height: 14px;
+          top: 10%;
+        }
+      }
     }
   }
 }

@@ -11,9 +11,9 @@
     </div>
     <div class="product__price">{{ product.price }} ₽</div>
     <div class="product__changeCount">
-      <div @click="decCount">-</div>
-      {{ count }}
-      <div @click="incCount">+</div>
+      <div class="count-button" @click="decCount">-</div>
+      <p>{{ count }}</p>
+      <div class="count-button" @click="incCount">+</div>
     </div>
     <img
       class="product__remove"
@@ -65,8 +65,10 @@ export default {
 <style scoped lang="scss">
 .product {
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   position: relative;
+  font-size: 14px;
+  text-align: center;
   &__image {
     height: 50%;
     display: flex;
@@ -84,15 +86,34 @@ export default {
     padding: 0 10px;
     width: calc(100% - 20px);
   }
+  &__price {
+    font-weight: 600;
+  }
   &__changeCount {
+    position: absolute;
+    bottom: 5%;
     display: flex;
+    justify-content: center;
+    p {
+      margin: 0 10px;
+    }
   }
   &__remove {
     position: absolute;
-    top: 20%;
+    top: 8%;
     left: 60%;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
   }
+}
+.count-button {
+  background-color: #ededed;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 </style>

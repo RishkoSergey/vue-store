@@ -37,5 +37,12 @@ export default {
   width: 70%;
   border-left: 1px solid #ededed;
   border-top: 1px solid #ededed;
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(100% + 1px);
+  }
 }
 </style>

@@ -9,14 +9,16 @@
     <div class="product__name">
       {{ product.name }}
     </div>
-    <div class="product__price">{{ product.price }} ₽</div>
     <div class="product__cart">
+      <div class="product__cart__price">{{ product.price }} ₽</div>
       <div class="product__cart__changeCount">
-        <div @click="decCount">-</div>
-        {{ count }}
-        <div @click="incCount">+</div>
+        <div class="count-button" @click="decCount">-</div>
+        <p>{{ count }}</p>
+        <div class="count-button" @click="incCount">+</div>
       </div>
-      <div @click="addProduct">Добавить в корзину</div>
+      <div @click="addProduct" class="product__cart__add">
+        Добавить в корзину
+      </div>
     </div>
   </div>
 </template>
@@ -53,8 +55,10 @@ export default {
 .product {
   border-right: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
+  font-size: 14px;
   width: 100%;
   height: 60vh;
+  position: relative;
   &__image {
     height: 50%;
     display: flex;
@@ -66,16 +70,48 @@ export default {
     }
   }
   &__name,
-  &__price,
   &__category,
   &__cart {
     padding: 0 10px;
     width: calc(100% - 20px);
   }
+  &__category {
+    font-size: 12px;
+    color: gray;
+  }
+  &__name {
+    margin-bottom: 10px;
+  }
   &__cart {
+    position: absolute;
+    bottom: 5%;
     &__changeCount {
+      margin-bottom: 10px;
       display: flex;
+      p {
+        margin: 0 10px;
+      }
+    }
+    &__price {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    &__add {
+      cursor: pointer;
+      background-color: #ededed;
+      border: 1px solid gray;
+      border-radius: 5px;
+      text-align: center;
     }
   }
+}
+.count-button {
+  background-color: #ededed;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 </style>

@@ -20,8 +20,11 @@ export default {
 
 <style lang="scss">
 .home {
-  margin-top: 60px;
   display: flex;
   padding: 0 20px;
+  @media (max-width: 767px) {
+    padding: 0;
+    display: block;
+  }
 }
 </style>
