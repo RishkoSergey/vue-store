@@ -178,7 +178,7 @@ export default {
     }
   }
   @media (max-width: 767px) {
-    margin-left: -20px;
+    margin-left: -10px;
     &__content {
       box-shadow: none;
       border-radius: 8px;
